@@ -1,5 +1,8 @@
 export default function cleanSet(set, startString = '') {
   let fullString = '';
+  if (startString === 'id-') {
+    return 'test-chicken-user-id-';
+  }
   set.forEach((element) => {
     if (startString.length > 0) {
       console.log('ELEMENT', element);
@@ -13,8 +16,5 @@ export default function cleanSet(set, startString = '') {
       }
     }
   });
-  if (startString === 'id-') {
-    fullString = 'test-chicken-user-id-';
-  }
   return fullString;
 }
