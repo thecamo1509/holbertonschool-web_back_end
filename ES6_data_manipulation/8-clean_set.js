@@ -12,5 +12,8 @@ export default function cleanSet(set, startString = '') {
       }
     }
   });
+  if(fullString.endsWith('-')){
+    fullString.slice(0, -1)
+  }
   return fullString;
 }
