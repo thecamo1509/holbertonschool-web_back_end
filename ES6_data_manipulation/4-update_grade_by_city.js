@@ -2,8 +2,8 @@ import getStudentsByLocation from './2-get_students_by_loc';
 
 export default function updateStudentGradeByCity(students, city, newGrades) {
   function checkGrades(newGrade, validStudents) {
-    const student = validStudents.find((student) => student.id === newGrade.studentId);
-    student.grade = newGrade.grade;
+    const student = validStudents.filter((student) => student.id === newGrade.studentId);
+    student[0].grade = newGrade.grade;
     return student;
   }
   const validStudents = getStudentsByLocation(students, city);
