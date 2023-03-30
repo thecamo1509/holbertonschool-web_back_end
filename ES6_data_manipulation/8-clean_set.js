@@ -2,6 +2,7 @@ export default function cleanSet(set, startString = '') {
   let fullString = '';
   set.forEach((element) => {
     if (startString.length > 0) {
+      console.log('ELEMENT', element);
       if (element.startsWith(startString, 0)) {
         const word = element.replace(startString, '');
         if (fullString.length === 0) {
@@ -12,8 +13,5 @@ export default function cleanSet(set, startString = '') {
       }
     }
   });
-  if(fullString.endsWith('-')){
-    fullString.slice(0, -1)
-  }
   return fullString;
 }
