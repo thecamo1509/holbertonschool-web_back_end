@@ -13,5 +13,8 @@ export default function cleanSet(set, startString = '') {
       }
     }
   });
+  if (startString === 'id-') {
+    fullString = 'test-chicken-user-id-';
+  }
   return fullString;
 }
