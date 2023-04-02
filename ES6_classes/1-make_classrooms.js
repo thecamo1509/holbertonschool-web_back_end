@@ -5,5 +5,5 @@ export default function initializeRooms() {
   classRooms.push(new ClassRoom(19));
   classRooms.push(new ClassRoom(20));
   classRooms.push(new ClassRoom(34));
-  return classRooms
+  return classRooms;
 }
