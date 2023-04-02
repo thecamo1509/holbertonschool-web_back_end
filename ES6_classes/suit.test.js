@@ -1,8 +1,6 @@
-import Airport from "./7-airport.js";
+import listOfStudents, { StudentHolberton, HolbertonClass } from "./9-hoisting.js";
 
-const airportSF = new Airport('San Francisco Airport', 'SFO');
-
-test("Airport has implemented toStringTag", () => {
-  expect(String(airportSF)).toBe('[object SFO]');
-  expect('' + airportSF).toBe('[object SFO]');
+test("initialization works correctly", () => {
+  expect(listOfStudents[0] instanceof StudentHolberton).toBe(true);
+  expect(listOfStudents[0].holbertonClass instanceof HolbertonClass).toBe(true);
 });
