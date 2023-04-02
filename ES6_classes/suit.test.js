@@ -1,13 +1,11 @@
-import HolbertonCourse from "./2-hbtn_course.js";
+import SkyHighBuilding from './6-sky_high.js';
 
-test("HolbertonCourse checks constructor types", () => {
-    expect(() => {
-      new HolbertonCourse(10, 20, ["Lucie", "Guillaume"]);
-    }).toThrowError();
-    expect(() => {
-      new HolbertonCourse('PHP', '20', ["Lucie", "Guillaume"]);
-    }).toThrowError();
-    expect(() => {
-      new HolbertonCourse('PHP', 20, "Lucie");
-    }).toThrowError();
+test("SkyHighBuilding is implemented correctly", () => {
+    const building = new SkyHighBuilding(200, 65);
+  
+    expect(building.sqft).toBe(200);
+    expect(building.floors).toBe(65);
+  
+    expect(typeof building.evacuationWarningMessage).toBe("function");
+    expect(building.evacuationWarningMessage()).toBe("Evacuate slowly the 65 floors");
 });
