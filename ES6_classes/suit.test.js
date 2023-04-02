@@ -1,11 +1,9 @@
-import SkyHighBuilding from './6-sky_high.js';
+import Building from './5-building.js';
 
-test("SkyHighBuilding is implemented correctly", () => {
-    const building = new SkyHighBuilding(200, 65);
-  
-    expect(building.sqft).toBe(200);
-    expect(building.floors).toBe(65);
-  
-    expect(typeof building.evacuationWarningMessage).toBe("function");
-    expect(building.evacuationWarningMessage()).toBe("Evacuate slowly the 65 floors");
+class TestBuilding extends Building {}
+
+test("Building forces override", () => {
+  expect(() => {
+    new TestBuilding(200);
+  }).toThrowError("Class extending Building must override evacuationWarningMessage");
 });
