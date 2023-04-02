@@ -1,9 +1,8 @@
-import Building from './5-building.js';
+import Airport from "./7-airport.js";
 
-class TestBuilding extends Building {}
+const airportSF = new Airport('San Francisco Airport', 'SFO');
 
-test("Building forces override", () => {
-  expect(() => {
-    new TestBuilding(200);
-  }).toThrowError("Class extending Building must override evacuationWarningMessage");
+test("Airport has implemented toStringTag", () => {
+  expect(String(airportSF)).toBe('[object SFO]');
+  expect('' + airportSF).toBe('[object SFO]');
 });
